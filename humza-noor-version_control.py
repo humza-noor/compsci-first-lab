@@ -7,8 +7,16 @@ def encode(password):
         encoded_password += str((int(digit) + 3) % 10)  # Shift each digit by 3
     return encoded_password
 
-
-
+# Jacob Melendez Edits
+def decode(password):
+    decoded_password = ""
+    for item in password:
+        item = int(item)
+        item += 10
+        item -= 3
+        item %= 10
+        decoded_password += str(item)
+    return decoded_password
 
 
 # Main function with menu
